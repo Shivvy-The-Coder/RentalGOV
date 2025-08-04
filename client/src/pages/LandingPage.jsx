@@ -40,7 +40,7 @@ const LandingPage = () => {
 
         <div className="bg-white shadow-lg rounded-xl p-8 border border-gray-200">
           <h3 className="text-xl font-semibold mb-6 text-center text-[#0070c0]">
-            Secure Login
+            Login
           </h3>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>

@@ -14,7 +14,7 @@ const Navbar = () => {
             </h1>
           </div>
         </div>
-        <div className="text-sm text-gray-700">भारत सरकार</div>
+        <div className="text-sm text-gray-700">झारखंड सरकार</div>
       </nav>
     </div>
   )

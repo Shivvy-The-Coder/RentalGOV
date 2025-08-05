@@ -93,11 +93,11 @@ const UnitForm = () => {
         {submitted && (
           <div className="mt-6 border-t pt-6 space-y-4">
             <div className="flex justify-between text-lg font-medium">
-              <span>Total Tax Due:</span>
+              <span>Total Demand:</span>
               <span className="text-gray-600">N/A</span>
             </div>
             <div className="flex justify-between text-lg font-medium">
-              <span>Total Payment:</span>
+              <span>Net Payment:</span>
               <span className="text-gray-600">N/A</span>
             </div>
             <button

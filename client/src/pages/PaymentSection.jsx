@@ -42,7 +42,8 @@ const PaymentPage = () => {
                     <button
                       key={option.id}
                       className={`w-full text-left p-3 rounded-md border transition-all duration-200 flex items-center space-x-3 ${
-                        selectedMethod === option.id
+                        selectedMethod === option.id 
+                        // just for updation
                           ? "bg-blue-50 border-blue-300 ring-2 ring-blue-200"
                           : "bg-white border-gray-200 hover:bg-gray-50 hover:border-gray-300"
                       }`}

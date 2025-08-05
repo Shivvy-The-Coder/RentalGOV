@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-
+import { assets } from "../assets/assets";
 
 const PaymentPage = () => {
   const [selectedMethod, setSelectedMethod] = useState("Card Payment");
@@ -9,10 +9,10 @@ const PaymentPage = () => {
     { id: "Card Payment", label: "Card Payment", icon: "💳" },
     { id: "UPI / QR Code", label: "UPI / QR Code", icon: "📱" },
     { id: "Net Banking", label: "Net Banking", icon: "🏦" },
-    { id: "PayTM", label: "PayTM", icon: "💰" },
-    { id: "Google Pay", label: "Google Pay", icon: "🔵" },
-    { id: "Amazon Pay", label: "Amazon Pay", icon: "🟠" },
-    { id: "BHIM", label: "BHIM", icon: "🇮🇳" },
+    { id: "PayTM", label: "PayTM", icon: assets.Paytm },
+    { id: "Google Pay", label: "Google Pay", icon: assets.Gpay },
+    { id: "Amazon Pay", label: "Amazon Pay", icon: assets.AmazonPay },
+    { id: "BHIM", label: "BHIM", icon: assets.BHIM },
     { id: "Mobile Banking", label: "Mobile Banking", icon: "📲" },
     { id: "Rural Bank Payment", label: "Rural Bank Payment", icon: "🌾" },
   ];

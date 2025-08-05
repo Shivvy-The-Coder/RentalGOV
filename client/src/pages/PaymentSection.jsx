@@ -9,10 +9,10 @@ const PaymentPage = () => {
     { id: "Card Payment", label: "Card Payment", icon: "💳" },
     { id: "UPI / QR Code", label: "UPI / QR Code", icon: "📱" },
     { id: "Net Banking", label: "Net Banking", icon: "🏦" },
-    { id: "PayTM", label: "PayTM", icon: "💰" },
-    { id: "Google Pay", label: "Google Pay", icon: "" },
-    { id: "Amazon Pay", label: "Amazon Pay", icon: "🟠" },
-    { id: "BHIM", label: "BHIM", icon: "🇮🇳" },
+    { id: "PayTM", label: "PayTM", icon: assets.Paytm , isImage:true },
+    { id: "Google Pay", label: "Google Pay", icon: assets.Gpay ,isImage:true },
+    { id: "Amazon Pay", label: "Amazon Pay", icon: assets.AmazonPay,isImage:true },
+    { id: "BHIM", label: "BHIM", icon: assets.BHIM , isImage:true },
     { id: "Mobile Banking", label: "Mobile Banking", icon: "📲" },
     { id: "Rural Bank Payment", label: "Rural Bank Payment", icon: "🌾" },
   ];
@@ -48,7 +48,13 @@ const PaymentPage = () => {
                       }`}
                       onClick={() => setSelectedMethod(option.id)}
                     >
-                      <span className="text-lg">{option.icon}</span>
+                      <span className="text-lg">
+                        {typeof option.icon === "string" && option.icon.includes("/") ? (
+                          <img src={option.icon} alt={option.label} className="h-6 w-6" />
+                        ) : (
+                          option.icon
+                        )}
+                      </span>
                       <span className={`font-medium ${
                         selectedMethod === option.id ? "text-blue-700" : "text-gray-700"
                       }`}>

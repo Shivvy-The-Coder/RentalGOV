@@ -4,6 +4,8 @@ import BHIM from "./BHIM.png"
 import Gpay from "./Gpay.png"
 import AmazonPay from "./AmazonPay.png"
 import Paytm from "./Paytm.png"
+import PaymentTick from "./PaymentTick.png"
+import QR from "./QR.jpg"
 
 export const assets ={
     NationalEmblem,
@@ -11,5 +13,7 @@ export const assets ={
     BHIM,
     Gpay,
     AmazonPay,
-    Paytm
+    Paytm,
+    QR,
+    PaymentTick
 };

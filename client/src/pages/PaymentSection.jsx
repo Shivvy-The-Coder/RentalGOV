@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import { assets } from "../assets/assets";
-
+import { useNavigate } from "react-router-dom";
 const PaymentPage = () => {
-  const [selectedMethod, setSelectedMethod] = useState("Card Payment");
+  // const [selectedMethod, setSelectedMethod] = useState("Card Payment");
+  const [selectedMethod, setSelectedMethod] = useState("UPI / QR Code");
 
+  const navigate = useNavigate();
   const paymentOptions = [
-    { id: "Card Payment", label: "Card Payment", icon: "💳" },
     { id: "UPI / QR Code", label: "UPI / QR Code", icon: "📱" },
+    { id: "Card Payment", label: "Card Payment", icon: "💳" },
     { id: "Net Banking", label: "Net Banking", icon: "🏦" },
     { id: "PayTM", label: "PayTM", icon: assets.Paytm , isImage:true },
     { id: "Google Pay", label: "Google Pay", icon: assets.Gpay ,isImage:true },
@@ -18,6 +20,7 @@ const PaymentPage = () => {
   ];
 
   return (
+    
     <div className="min-h-screen bg-gray-50">
       <Navbar/>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -90,6 +93,18 @@ const PaymentPage = () => {
 
               <div className="p-6">
                 <div className="space-y-6">
+                  {selectedMethod === "UPI / QR Code" && (
+                    <div>
+                      <div className="flex justify-center flex-col items-center">
+                        <p className="mt-2 text-xs text-gray-500">
+                        Scan the following QR Code
+                      </p>
+                      <img src={assets.QR} alt="" className="w-42 h-42"/>
+                      </div>
+                    </div>
+                  )}
+
+
                   {selectedMethod === "Card Payment" && (
                     <div className="space-y-4">
                       <div>
@@ -145,22 +160,7 @@ const PaymentPage = () => {
                       </div>
                     </div>
                   )}
-                  {selectedMethod === "UPI / QR Code" && (
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        UPI ID *
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="yourname@upi (e.g., john@paytm, user@gpay)"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                        required
-                      />
-                      <p className="mt-2 text-xs text-gray-500">
-                        Enter your registered UPI ID to proceed with payment
-                      </p>
-                    </div>
-                  )}
+                  
 
                   {selectedMethod === "Net Banking" && (
                     <div>
@@ -243,6 +243,7 @@ const PaymentPage = () => {
 
                   <div className="pt-4">
                     <button
+                      onClick={() => navigate("/paymentStatus")}
                       type="submit"
                       className="w-full bg-green-600 hover:bg-green-700 text-white py-4 px-6 rounded-md font-semibold text-lg transition-colors duration-200 focus:ring-4 focus:ring-green-200 focus:outline-none"
                     >

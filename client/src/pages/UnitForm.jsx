@@ -94,11 +94,11 @@ const UnitForm = () => {
           <div className="mt-6 border-t pt-6 space-y-4">
             <div className="flex justify-between text-lg font-medium">
               <span>Total Demand:</span>
-              <span className="text-gray-600">N/A</span>
+              <span className="text-gray-600">₹10</span>
             </div>
             <div className="flex justify-between text-lg font-medium">
               <span>Net Payment:</span>
-              <span className="text-gray-600">N/A</span>
+              <span className="text-gray-600">₹10</span>
             </div>
             <button
               onClick={() => navigate("/payment")}

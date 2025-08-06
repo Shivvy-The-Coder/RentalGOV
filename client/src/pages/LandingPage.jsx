@@ -54,6 +54,7 @@ const LandingPage = () => {
                 className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#0070c0] focus:outline-none"
                 placeholder="Enter username/Ph.no"
               />
+              {console.log(username)};
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">
@@ -66,6 +67,7 @@ const LandingPage = () => {
                 className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#0070c0] focus:outline-none"
                 placeholder="Enter password"
               />
+              {console.log(password)};
             </div>
             <div className="flex items-center justify-between">
               <label className="flex items-center text-sm text-gray-600">

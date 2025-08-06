@@ -20,11 +20,8 @@ const PaymentPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar/>
-      {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          
-          {/* Payment Methods - Left Side */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200">
               <div className="px-6 py-4 border-b border-gray-200">
@@ -43,7 +40,6 @@ const PaymentPage = () => {
                       key={option.id}
                       className={`w-full text-left p-3 rounded-md border transition-all duration-200 flex items-center space-x-3 ${
                         selectedMethod === option.id 
-                        // just for updation
                           ? "bg-blue-50 border-blue-300 ring-2 ring-blue-200"
                           : "bg-white border-gray-200 hover:bg-gray-50 hover:border-gray-300"
                       }`}
@@ -69,8 +65,6 @@ const PaymentPage = () => {
                 </div>
               </div>
             </div>
-
-            {/* Security Notice */}
             <div className="mt-6 bg-green-50 border border-green-200 rounded-lg p-4">
               <div className="flex items-start">
                 <span className="text-green-600 text-lg mr-3">🔒</span>
@@ -83,8 +77,6 @@ const PaymentPage = () => {
               </div>
             </div>
           </div>
-
-          {/* Payment Form - Right Side */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200">
               <div className="px-6 py-4 border-b border-gray-200">
@@ -98,7 +90,6 @@ const PaymentPage = () => {
 
               <div className="p-6">
                 <div className="space-y-6">
-                  {/* Card Payment Fields */}
                   {selectedMethod === "Card Payment" && (
                     <div className="space-y-4">
                       <div>
@@ -154,8 +145,6 @@ const PaymentPage = () => {
                       </div>
                     </div>
                   )}
-
-                  {/* UPI Payment Fields */}
                   {selectedMethod === "UPI / QR Code" && (
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -173,7 +162,6 @@ const PaymentPage = () => {
                     </div>
                   )}
 
-                  {/* Net Banking Fields */}
                   {selectedMethod === "Net Banking" && (
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -196,7 +184,7 @@ const PaymentPage = () => {
                     </div>
                   )}
 
-                  {/* Other payment methods */}
+
                   {(selectedMethod === "PayTM" || selectedMethod === "Google Pay" || selectedMethod === "Amazon Pay" || selectedMethod === "BHIM") && (
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -212,7 +200,7 @@ const PaymentPage = () => {
                     </div>
                   )}
 
-                  {/* CAPTCHA Section */}
+
                   <div className="bg-gray-50 p-4 rounded-md border">
                     <label className="block text-sm font-medium text-gray-700 mb-3">
                       Security Verification *
@@ -232,7 +220,7 @@ const PaymentPage = () => {
                     </div>
                   </div>
 
-                  {/* Terms and Conditions */}
+
                   <div className="flex items-start space-x-3">
                     <input
                       type="checkbox"
@@ -252,7 +240,7 @@ const PaymentPage = () => {
                     </label>
                   </div>
 
-                  {/* Submit Button */}
+
                   <div className="pt-4">
                     <button
                       type="submit"
@@ -269,7 +257,7 @@ const PaymentPage = () => {
         </div>
       </div>
 
-      {/* Footer */}
+
       <footer className="bg-gray-800 text-white mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
